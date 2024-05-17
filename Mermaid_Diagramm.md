@@ -39,6 +39,7 @@ class `dcat:Dataset` {
   dct#58;modified xsd#58;date; xsd#58;dateTime; xsd#58;gYear; xsd#58;gYearMonth [1...1] 
   dct#58;provenance dct#58;ProvenanceStatement [1...*] 
   dct#58;relation rdfs#58;Resource [1...*] 
+  dct#58;type skos#58;Concept [1...1] 
   foaf#58;page foaf#58;Document [1...*] 
   owl#58;versionInfo rdfs#58;Literal [1...1] 
   prov#58;qualifiedAttribution prov#58;Attribution [1...*] 
