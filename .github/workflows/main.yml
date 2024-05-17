@@ -68,5 +68,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.ADMIN }}
-          repository: Matze2402/mermaid_hendrik
+          repository: HendrikBorgelt/main
           event-type: job3
