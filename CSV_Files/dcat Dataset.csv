@@ -21,6 +21,7 @@ language,dct:language,optional,-,LinguisticSystem,dct:LinguisticSystem,TRUE
 modified,dct:modified,optional,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
 provenance,dct:provenance,optional,-,ProvenanceStatement,dct:ProvenanceStatement,TRUE
 relation,dct:relation,optional,-,Resource,rdfs:Resource,TRUE
+type,dct:type,optional,-,Concept,skos:Concept,FALSE
 page,foaf:page,optional,-,Document,foaf:Document,TRUE
 versionInfo,owl:versionInfo,optional,-,Literal,rdfs:Literal,FALSE
 qualifiedAttribution,prov:qualifiedAttribution,optional,-,Attribution,prov:Attribution,TRUE
