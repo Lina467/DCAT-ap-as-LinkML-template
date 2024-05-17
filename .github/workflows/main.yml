@@ -27,8 +27,8 @@ jobs:
           git ls-tree --full-tree -r HEAD
       - name: Commit files
         run: |
-          git config --local user.name "matze2402"
-          git config --local user.email "matthias.gacka@tu-dortmund.de"
+          git config --local user.name "HendrikBorgelt"
+          git config --local user.email "hendrik.borgelt@tu-dortmund.de"
           git add DCAT_AP_via_CSV.yaml
           git pull origin main --no-edit
           git push origin main
@@ -57,8 +57,8 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --global user.email "matze2402"
-          git config --global user.name "matthias.gacka@tu-dortmund.de"
+          git config --global user.email "hendrik.borgelt@tu-dortmund.de"
+          git config --global user.name "HendrikBorgelt"
           git add Mermaid_Diagramm.md
           git commit -m "Update combined Mermaid Diagram"
           git pull origin main --no-edit
@@ -68,5 +68,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.ADMIN }}
-          repository: HendrikBorgelt/main
+          repository: HendrikBorgelt/DCAT-ap-as-LinkML-template
           event-type: job3
