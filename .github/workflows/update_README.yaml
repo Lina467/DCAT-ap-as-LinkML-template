@@ -1,0 +1,35 @@
+name: update_README.md
+
+on:
+ repository_dispatch:
+    types: [job3]
+
+jobs:
+  Update_README:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Specify the Python version you need
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # If you have any dependencies
+
+      - name: Run the update_readme script
+        run: python scripts/update_readme.py
+
+      - name: List all contents in the branch
+        run: |
+          git ls-tree --full-tree -r HEAD
+
+      - name: Commit files
+        run: |
+          git config --local user.name "matze2402"
+          git config --local user.email "matthias.gacka@tu-dortmund.de"
+          git add README.md
+          git commit -m "Update README.md"
+          git push
