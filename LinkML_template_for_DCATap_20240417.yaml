@@ -45,6 +45,10 @@ classes:
                 range: rdfs_Literal
                 required: true
                 multivalued: true
+            n4Cat_Experiment:
+                slot_uri: n4Cat:Experiment
+                required: true
+                range: rdfs_Literal
             # recommended
             dct_contactPoint:
                 slot_uri: dct:contactPoint
@@ -810,6 +814,65 @@ classes:
     
     dcat_Resource:
         class_uri: dcat:Resource
+
+    n4Cat_Experiment:
+        class_uri: n4Cat:Experiment
+        attributes:
+            n4Cat_ExperimentStep:
+                slot_uri: n4Cat:ExperimentStep
+                required: true
+                multivalued: true
+                range: 
+           n4Cat_Measurement:
+                slot_uri: n4Cat:Measurement:
+                required: true
+                range: 
+          n4Cat_Reaction:
+                slot_uri: n4Cat:Reaction
+                required: true
+                range: 
+          n4Cat_Sample:
+                slot_uri: n4Cat:Sample
+                required: true
+                range:
+
+    n4Cat_ExperimentStep:
+        class_uri: n4Cat:ExperimentStep
+            attributes:
+                n4Cat_Parameter:
+                    slot_uri: n4Cat:Parameter
+                    required: true
+                    multivalued: true
+                    range: 
+                n4Cat_Measurement:
+                    slot_uri: n4Cat:Measurement
+                    required: true
+                    range: 
+
+    n4Cat_Measurement:
+        class_uri: n4Cat:Measurement
+
+    n4Cat_Reaction:
+        class_uri: n4Cat:Reaction
+
+    n4Cat_Sample:
+        class_uri: n4Cat:Sample
+
+    n4Cat_Catalysator:
+        class_uri: n4Cat:Catalysator
+        attributes:
+            n4Cat_Measurement:
+                slot_uri: n4Cat:Measurement
+                required: true
+                range: 
+            n4Cat_Reaction:
+                slot_uri: n4Cat:Reaction
+                required: true
+                range: 
+           n4Cat_Sample:
+                slot_uri: n4Cat:Sample
+                required: true
+                range: 
             
     # external Relations
     rdfs_Literal:
